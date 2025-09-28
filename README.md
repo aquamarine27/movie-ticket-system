@@ -1,23 +1,5 @@
 # Microservices: Movies and Tickets 
 
-## Project Structure
-
-bash
-microservices-cinema/
-├── docker-compose.yml
-├── Cinema_Microservices_API.postman_collection.json
-├── movie-service/
-│   ├── Dockerfile
-│   ├── package.json
-│   ├── index.js
-│   └── movies.json
-└── ticket-service/
-├── Dockerfile
-├── package.json
-├── index.js
-└── tickets.json
-
-
 ## First-Time Setup
 1. **Requirements**:
    - Docker and Docker Compose [](https://www.docker.com/get-started).
