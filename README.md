@@ -2,9 +2,10 @@
 
 ## Project Structure
 
-movie-ticket-system/
+bash
+microservices-cinema/
 ├── docker-compose.yml
-├── movie-ticket_API.postman_collection.json
+├── Cinema_Microservices_API.postman_collection.json
 ├── movie-service/
 │   ├── Dockerfile
 │   ├── package.json
