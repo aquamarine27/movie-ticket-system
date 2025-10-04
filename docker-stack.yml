@@ -1,15 +1,19 @@
-version: "3.9"
+version: "3.7"
 
 services:
   movie-service:
-    build: ./movie-service
+    image: tenshyy/movie-service:latest  
+    deploy:
+      replicas: 2
     ports:
       - "5001:5001"
     networks:
       - cinema-net
 
   ticket-service:
-    build: ./ticket-service
+    image: tenshyy/ticket-service:latest  
+    deploy:
+      replicas: 2
     ports:
       - "5002:5002"
     networks:
@@ -23,6 +27,8 @@ services:
       - "80:80"
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    deploy:
+      replicas: 1
     depends_on:
       - movie-service
       - ticket-service
@@ -31,4 +37,4 @@ services:
 
 networks:
   cinema-net:
-    driver: bridge
+    driver: overlay
